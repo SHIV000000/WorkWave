@@ -6,35 +6,49 @@ from .models import Project, Task, Profile, TaskComment, TaskAttachment, TaskCat
 from .models import TaskCategory
 from django.forms.widgets import DateInput
 
+
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['name', 'description', 'due_date', 'status', 'project', 'assigned_to', 'category']
+        fields = [
+            "name",
+            "description",
+            "due_date",
+            "status",
+            "project",
+            "assigned_to",
+            "category",
+        ]
         widgets = {
-            'due_date': DateInput(attrs={'type': 'date'}),
+            "due_date": DateInput(attrs={"type": "date"}),
         }
+
 
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'description', 'start_date', 'end_date']
+        fields = ["name", "description", "start_date", "end_date"]
+
 
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['social_links', 'bio', 'profile_image']
+        fields = ["social_links", "bio", "profile_image"]
+
 
 class TaskCommentForm(forms.ModelForm):
     class Meta:
         model = TaskComment
-        fields = ['comment']
+        fields = ["comment"]
+
 
 class TaskAttachmentForm(forms.ModelForm):
     class Meta:
         model = TaskAttachment
-        fields = ['file']
+        fields = ["file"]
+
 
 class TaskCategoryForm(forms.ModelForm):
     class Meta:
         model = TaskCategory
-        fields = ['name']
+        fields = ["name"]
