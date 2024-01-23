@@ -1,0 +1,45 @@
+<!-- tasks/templates/tasks/profile.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">User Profile</h2>
+            <hr>
+
+            {% if user.is_authenticated %}
+              <p>Welcome, {{ user.username }}!</p>
+              <p>Email: {{ user.email }}</p>
+              <p>First Name: {{ user.first_name }}</p>
+              <p>Last Name: {{ user.last_name }}</p>
+              
+              <!-- Add more user-related information -->
+              {% if user.profile %}
+                <p>Profile Image: <img src="{{ user.profile.profile_image.url }}" alt="Profile Image" width="100"></p>
+                <p>Bio: {{ user.profile.bio }}</p>
+                <a href="{% url 'profile_update' %}">Edit Profile</a>
+
+                {% if user.profile.social_links %}
+                  <p>Social Links:</p>
+                  <ul>
+                    {% for link in user.profile.social_links.all %}
+                      <li><a href="{{ link.url }}" target="_blank">{{ link.platform }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endif %}
+
+            
+            {% else %}
+              <p>You are not logged in. Please <a href="{% url 'login' %}">log in</a>.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

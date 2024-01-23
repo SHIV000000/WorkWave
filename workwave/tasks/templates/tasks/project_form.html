@@ -1,0 +1,23 @@
+<!-- tasks/templates/tasks/project_form.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}{{ action }} Project - WorkWave{% endblock %}
+
+{% block content %}
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h2>{{ action }} Project</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">{{ action }} Project</button>
+      </form>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      <a class="btn btn-secondary" href="{% url 'project_list' %}">Cancel</a>
+    </div>
+  </div>
+{% endblock %}

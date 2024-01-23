@@ -1,0 +1,23 @@
+<!-- tasks/templates/tasks/project_list.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Projects - WorkWave{% endblock %}
+
+{% block content %}
+  <div class="row mt-4">
+    <div class="col-md-8">
+      <h2>Your Projects</h2>
+      <ul class="list-group">
+        {% for project in projects %}
+          <li class="list-group-item">
+            <a href="{% url 'project_detail' project.id %}">{{ project.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <a class="btn btn-primary" href="{% url 'project_create' %}">Create New Project</a>
+    </div>
+  </div>
+{% endblock %}
