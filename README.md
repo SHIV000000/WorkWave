@@ -14,7 +14,7 @@
 
 Follow these steps to set up the WorkWave Django app:
 
-### 1. Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/SHIV000000/WorkWave.git
