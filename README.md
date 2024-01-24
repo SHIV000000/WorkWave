@@ -65,6 +65,14 @@ python manage.py createsuperuser
 ```
 **Run the Development Server**
 
+Start the development server using Gunicorn:
+
+```bash
+gunicorn workwave.wsgi:application
+```
+
+**Run the Development Server**
+
 ```bash
 python manage.py runserver
 ```
