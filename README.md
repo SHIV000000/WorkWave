@@ -8,7 +8,6 @@
 - User profiles with bio and social links
 - Task comments and attachments
 - Project managers and team leads roles
-- ...
 
 ## Setup Instructions
 
