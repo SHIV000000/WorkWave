@@ -46,7 +46,10 @@ Activate the Virtual Environment:
 Install Dependencies:
 
 ```bash
-pip install -r requirements.txt
+>pip install django
+```
+```bash
+python -m pip install Pillow
 ```
 
 Apply Migrations:
