@@ -46,7 +46,7 @@ Activate the Virtual Environment:
 Install Dependencies:
 
 ```bash
->pip install django
+pip install django
 ```
 ```bash
 python -m pip install Pillow
