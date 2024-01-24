@@ -29,20 +29,21 @@ On macOS/Linux:
 
    python3 -m venv venv
    ```
- On Windows:
-   ```bash
-   python -m venv venv
-   ```
-On macOS/Linux:
 Activate the Virtual Environment:
 ```bash
 source venv/bin/activate
  ```
+
 On Windows:
+```bash
+python -m venv venv
+```
+
 Activate the Virtual Environment:
 ```bash
 .\venv\Scripts\activate
 ```
+
 Install Dependencies:
 
 ```bash
