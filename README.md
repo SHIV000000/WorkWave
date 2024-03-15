@@ -9,6 +9,15 @@
 - Task comments and attachments
 - Project managers and team leads roles
 
+<!-- Add a container div to hold the images -->
+<div style="display: flex; justify-content: center;">
+    <!-- Add the first image with appropriate styling -->
+    <img src="workwave1.png" alt="Example Image 1" style="margin-right: 10px;">
+    <!-- Add the second image with appropriate styling -->
+    <img src="workwave2.png" alt="Example Image 2" style="margin-left: 10px;">
+</div>
+
+
 ## Setup Instructions
 
 Follow these steps to set up the WorkWave Django app:
