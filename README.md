@@ -52,7 +52,7 @@ Activate the Virtual Environment:
 .\venv\Scripts\activate
 ```
 
-Install Dependencies:
+## Install Dependencies:
 
 ```bash
 pip install django
@@ -60,8 +60,11 @@ pip install django
 ```bash
 python -m pip install Pillow
 ```
+```bash
+pip install -r requirements.txt
+```
 
-Apply Migrations:
+## Apply Migrations:
 
 ```bash
 python manage.py makemigrations
@@ -70,12 +73,12 @@ python manage.py makemigrations
 ```bash
 python manage.py migrate
 ```
-**Create Superuser (Optional)**
+## Create Superuser (Optional)
 
  ```bash
 python manage.py createsuperuser
 ```
-**Run the Development Server**
+## Run the Development Server
 
 Start the development server using Gunicorn:
 
